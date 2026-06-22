@@ -24,9 +24,9 @@ export async function sendDiscordNotification(articles: ProcessedArticle[]) {
       ? 'https://cdn-icons-png.flaticon.com/512/174/174853.png' // Or an alternate HN icon, but wait, Flaticon 174853 is typically YC. Let's use a solid URL.
       : 'https://cdn-icons-png.flaticon.com/512/5969/5969051.png'; // Fallback to tech icon if dev.to not available
     
-    // Using more reliable URLs:
-    const hnIcon = 'https://icon.horse/icon/news.ycombinator.com';
-    const devIcon = 'https://icon.horse/icon/dev.to';
+    // Using highly reliable static PNG URLs to prevent Discord 500 errors
+    const hnIcon = 'https://cdn-icons-png.flaticon.com/512/174/174853.png';
+    const devIcon = 'https://cdn-icons-png.flaticon.com/512/5969/5969051.png';
 
     return {
       author: {
@@ -37,8 +37,6 @@ export async function sendDiscordNotification(articles: ProcessedArticle[]) {
       url: article.url,
       description: article.summary,
       color: color,
-      // Discord image proxy sometimes returns 500 if the URL is extremely long or complex
-      thumbnail: article.imageUrl && article.imageUrl.length < 500 ? { url: article.imageUrl } : undefined,
       timestamp: new Date().toISOString(),
     };
   });
