@@ -13,7 +13,8 @@ export async function filterAndSummarizeNews(articles: RawArticle[]): Promise<Pr
         title: z.string().describe("Translate the title to Thai"),
         summary: z.string().describe("สรุปเนื้อหาสั้นๆ 1-2 ประโยคเป็นภาษาไทย เพื่ออธิบายว่าข่าวนี้น่าสนใจอย่างไร"),
         url: z.string().url(),
-        source: z.enum(['Hacker News', 'Dev.to'])
+        source: z.enum(['Hacker News', 'Dev.to']),
+        emoji: z.string().describe("1 single emoji that best represents the topic of the news (e.g. 🚀, 🐛, 🤖, ⚛️)")
       })
     )
   });
@@ -31,7 +32,8 @@ export async function filterAndSummarizeNews(articles: RawArticle[]): Promise<Pr
         1. Filter out any news that is NOT relevant to Web Development, Software Engineering, AI, or Tech Trends.
         2. Keep only the highly relevant and interesting items.
         3. For each kept item, translate the title into Thai, and provide a 1-2 sentence summary IN THAI explaining WHY it is interesting or important for developers. Focus on technologies like Next.js, TypeScript, .NET, and AI.
-        4. If an item is not relevant, do not include it in the output array.
+        4. Provide 1 relevant emoji for each article.
+        5. If an item is not relevant, do not include it in the output array.
         
         Raw Articles (JSON):
         ${JSON.stringify(articles, null, 2)}

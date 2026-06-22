@@ -17,20 +17,34 @@ export async function sendDiscordNotification(articles: ProcessedArticle[]) {
   const topArticles = articles.slice(0, 10);
 
   const embeds = topArticles.map((article) => {
-    // Distinguish source by color (Orange for HN, Dark Gray for Dev.to)
-    const color = article.source === 'Hacker News' ? 0xff6600 : 0x222222;
+    const isHN = article.source === 'Hacker News';
+    const color = isHN ? 0xff6600 : 0x222222;
+    const authorName = isHN ? 'Hacker News Top Stories' : 'Dev.to Fresh Articles';
+    const authorIconUrl = isHN 
+      ? 'https://cdn-icons-png.flaticon.com/512/174/174853.png' // Or an alternate HN icon, but wait, Flaticon 174853 is typically YC. Let's use a solid URL.
+      : 'https://cdn-icons-png.flaticon.com/512/5969/5969051.png'; // Fallback to tech icon if dev.to not available
     
+    // Using more reliable URLs:
+    const hnIcon = 'https://icon.horse/icon/news.ycombinator.com';
+    const devIcon = 'https://icon.horse/icon/dev.to';
+
     return {
-      title: article.title,
+      author: {
+        name: authorName,
+        icon_url: isHN ? hnIcon : devIcon,
+      },
+      title: `${article.emoji} ${article.title}`,
       url: article.url,
       description: article.summary,
       color: color,
-      footer: {
-        text: `Source: ${article.source}`
-      },
+      thumbnail: article.imageUrl ? { url: article.imageUrl } : undefined,
       timestamp: new Date().toISOString(),
     };
   });
+
+  // Create dynamic thread name for today's news
+  const dateStr = new Date().toLocaleDateString('th-TH', { day: 'numeric', month: 'short' });
+  const threadName = `📰 สรุปข่าวไอทีประจำวันที่ ${dateStr}`;
 
   const payload = {
     username: 'AI Tech Digest',

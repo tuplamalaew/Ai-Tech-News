@@ -2,10 +2,10 @@ import * as cheerio from 'cheerio';
 import { RawArticle } from '../types';
 
 /**
- * Helper to extract text from a given URL using cheerio.
+ * Helper to extract text and image from a given URL using cheerio.
  * If fetching fails, we return a fallback string or empty string.
  */
-async function extractTextFromUrl(url: string): Promise<string> {
+async function extractDataFromUrl(url: string): Promise<{text: string, imageUrl?: string}> {
   try {
     const response = await fetch(url, {
       headers: {
@@ -16,7 +16,7 @@ async function extractTextFromUrl(url: string): Promise<string> {
     });
     
     if (!response.ok) {
-      return '';
+      return { text: '' };
     }
 
     const html = await response.text();
@@ -28,11 +28,17 @@ async function extractTextFromUrl(url: string): Promise<string> {
     // Extract text from paragraphs and headings
     const paragraphs = $('p, h1, h2, h3').map((_, el) => $(el).text()).get().join(' ');
     
+    // Extract OpenGraph image
+    const ogImage = $('meta[property="og:image"]').attr('content') || $('meta[name="twitter:image"]').attr('content');
+    
     // Trim and limit the extracted text to ~2000 characters to save tokens for LLM
-    return paragraphs.replace(/\s+/g, ' ').trim().slice(0, 2000);
+    return { 
+      text: paragraphs.replace(/\s+/g, ' ').trim().slice(0, 2000),
+      imageUrl: ogImage
+    };
   } catch (error) {
-    console.error(`Error extracting text from ${url}:`, error);
-    return '';
+    console.error(`Error extracting data from ${url}:`, error);
+    return { text: '' };
   }
 }
 
@@ -57,11 +63,14 @@ export async function fetchHackerNewsTop(limit = 10): Promise<RawArticle[]> {
       const item = await itemRes.json();
       
       let summary = item.text || ''; // If it's a text post (Ask HN), use the text
+      let imageUrl: string | undefined = undefined;
       const articleUrl = item.url || `https://news.ycombinator.com/item?id=${id}`;
 
       // If there is no text but there is a URL, we scrape the URL
       if (!summary && item.url) {
-        summary = await extractTextFromUrl(item.url);
+        const extracted = await extractDataFromUrl(item.url);
+        summary = extracted.text;
+        imageUrl = extracted.imageUrl;
       }
 
       return {
@@ -70,6 +79,7 @@ export async function fetchHackerNewsTop(limit = 10): Promise<RawArticle[]> {
         summary: summary || 'No content could be extracted.',
         url: articleUrl,
         source: 'Hacker News' as const,
+        imageUrl
       };
     });
 
@@ -97,6 +107,7 @@ export async function fetchDevToArticles(limit = 10): Promise<RawArticle[]> {
       summary: article.description || article.title, // Dev.to provides a short description
       url: article.url,
       source: 'Dev.to' as const,
+      imageUrl: article.social_image || article.cover_image,
     }));
   } catch (error) {
     console.error('Error fetching Dev.to articles:', error);

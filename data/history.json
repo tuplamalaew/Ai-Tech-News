@@ -1,89 +1,36 @@
 {
-  "lastUpdated": "2026-06-22T03:11:34.959Z",
+  "lastUpdated": "2026-06-22T03:53:18.979Z",
   "articles": [
     {
       "title": "Apertus – โมเดลพื้นฐานแบบเปิดสำหรับ AI ที่มีอธิปไตย",
-      "summary": "ข่าวนี้เปิดตัว Apertus ซึ่งเป็นโมเดล AI แบบโอเพ่นซอร์สจากสวิตเซอร์แลนด์ ที่เน้นความโปร่งใสและเป็นไปตามข้อกำหนดของ EU AI Act ซึ่งน่าสนใจสำหรับนักพัฒนา AI ที่ต้องการโมเดลที่เชื่อถือได้และสามารถปรับแต่งได้. โมเดลนี้แข่งขันกับโมเดลชั้นนำและรองรับหลายภาษาตั้งแต่เริ่มต้น.",
+      "summary": "ข่าวนี้เปิดตัว Apertus โมเดล AI พื้นฐานแบบเปิดที่พัฒนาโดยสวิส ซึ่งเน้นการปฏิบัติตามกฎระเบียบ EU AI Act และรองรับกว่า 1000 ภาษา เป็นข่าวสำคัญสำหรับนักพัฒนาที่สนใจโมเดล AI แบบเปิดที่โปร่งใสและนำไปใช้งานได้อย่างปลอดภัยในระดับสากล",
       "url": "https://apertvs.ai/",
-      "source": "Hacker News"
+      "source": "Hacker News",
+      "emoji": "🤖"
     },
     {
       "title": "Sakana Fugu",
-      "summary": "Sakana Fugu นำเสนอระบบ AI แบบ Multi-Agent ที่สามารถจัดการงานซับซ้อนได้อย่างมีประสิทธิภาพผ่าน API เดียว ทำให้การทำงานร่วมกันของโมเดล AI ต่างๆ เป็นไปอย่างราบรื่นและลดความซับซ้อนสำหรับนักพัฒนาที่ต้องการสร้างแอปพลิเคชัน AI ขั้นสูง.",
+      "summary": "Sakana Fugu นำเสนอระบบ Multi-Agent AI ที่สามารถจัดการและประสานงานโมเดล AI หลายตัวเพื่อแก้ไขงานที่ซับซ้อนได้อย่างมีประสิทธิภาพ ข่าวนี้น่าสนใจสำหรับนักพัฒนา AI ที่ต้องการสร้างแอปพลิเคชันที่ต้องการความสามารถในการให้เหตุผลและการเขียนโค้ดที่เหนือกว่าด้วย API เดียว",
       "url": "https://sakana.ai/fugu/",
-      "source": "Hacker News"
+      "source": "Hacker News",
+      "emoji": "🐡",
+      "imageUrl": "https://sakana.ai/assets/fugu_lp/ogp.png"
     },
     {
-      "title": "การเปลี่ยนไปใช้โมเดล AI แบบเปิดมีข้อเสียน้อยที่สุด",
-      "summary": "บทความนี้ชี้ให้เห็นว่าการเปลี่ยนไปใช้โมเดล AI แบบโอเพ่นซอร์สมีข้อดีมากขึ้นเรื่อยๆ คล้ายกับการเปลี่ยนไปใช้ Linux ในอดีต ซึ่งเป็นเทรนด์สำคัญที่นักพัฒนาควรพิจารณาเพื่อลดการพึ่งพาโมเดลเชิงพาณิชย์และเพิ่มความยืดหยุ่นในการพัฒนา AI.",
-      "url": "https://www.marble.onl/posts/cancel_claude.html",
-      "source": "Hacker News"
+      "title": "Chaos Engineering เป็นแค่การแสดงหากขาด 3 สิ่งนี้",
+      "summary": "บทความนี้กล่าวถึงความสำคัญของ Chaos Engineering และสิ่งจำเป็นที่ต้องมีเพื่อให้การทดสอบความยืดหยุ่นของระบบมีประสิทธิภาพจริงจัง นักพัฒนาและวิศวกรซอฟต์แวร์ควรศึกษาเพื่อนำไปปรับใช้ในการสร้างและดูแลระบบที่มีความเสถียรและทนทานต่อความผิดพลาด",
+      "url": "https://dev.to/samson_tanimawo/chaos-engineering-is-theater-without-these-three-things-1g5a",
+      "source": "Dev.to",
+      "emoji": "💥",
+      "imageUrl": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fnovaaiops.com%2Ffac2.png"
     },
     {
-      "title": "การประกอบโค้ดแบบ Inline ที่ปลอดภัยต่อหน่วยความจำ",
-      "summary": "บทความนี้กล่าวถึง Fil-C ที่รองรับ Inline Assembly แบบ Memory Safe ซึ่งเป็นคุณสมบัติสำคัญสำหรับนักพัฒนาที่ทำงานกับภาษา C ในระดับต่ำที่ต้องการควบคุมฮาร์ดแวร์อย่างละเอียดโดยยังคงรักษาความปลอดภัยของหน่วยความจำ.",
-      "url": "https://fil-c.org/inlineasm",
-      "source": "Hacker News"
-    },
-    {
-      "title": "ทำความเข้าใจ JSON-LD สำหรับเว็บไซต์ส่วนตัว",
-      "summary": "บทความนี้อธิบาย JSON-LD ซึ่งเป็นรูปแบบข้อมูลที่มีโครงสร้างที่สำคัญสำหรับการทำ SEO และช่วยให้ Search Engine เข้าใจเนื้อหาเว็บไซต์ได้ดีขึ้น ทำให้นักพัฒนาเว็บสามารถสร้างเว็บไซต์ที่ค้นพบง่ายและมี Rich Snippets ที่น่าสนใจ.",
-      "url": "https://hawksley.dev/blog/json-ld-explained-for-personal-websites/",
-      "source": "Hacker News"
-    },
-    {
-      "title": "คำร้องต่อต้านการเก็บข้อมูลการฝึกอบรมพนักงานของ Meta สำหรับโมเดล ML",
-      "summary": "ข่าวนี้เป็นคำร้องจากพนักงาน Meta ที่ไม่เห็นด้วยกับการเก็บข้อมูลการใช้งานคอมพิวเตอร์เพื่อฝึกโมเดล AI ซึ่งเน้นย้ำถึงประเด็นสำคัญด้านจริยธรรมของ AI และความเป็นส่วนตัวของข้อมูลที่นักพัฒนา AI และบริษัทเทคโนโลยีต้องตระหนักถึง.",
-      "url": "https://mcipetition.com/",
-      "source": "Hacker News"
-    },
-    {
-      "title": "ผมสร้างเครื่องมือเผยแพร่โซเชียลด้วย AI แบบไร้งบประมาณด้วย n8n – นี่คือสิ่งที่พัง",
-      "summary": "บทความนี้นำเสนอประสบการณ์จริงในการสร้างระบบเผยแพร่เนื้อหาลงโซเชียลมีเดียด้วย AI และ n8n โดยใช้งบประมาณจำกัด ซึ่งเป็นกรณีศึกษาที่เป็นประโยชน์สำหรับนักพัฒนาที่สนใจการสร้างระบบอัตโนมัติด้วย AI ในงบประมาณประหยัด.",
-      "url": "https://dev.to/noushad_patel/i-built-a-zero-budget-ai-social-publisher-with-n8n-heres-what-broke-1io0",
-      "source": "Dev.to"
-    },
-    {
-      "title": "SOLS-RUNNER: เกมเพื่อการศึกษาเกมแรกของฉันที่ใช้ AI เพื่อเรียนรู้เกี่ยวกับ Summer Solstice",
-      "summary": "บทความนี้กล่าวถึงเกมเพื่อการศึกษาที่ใช้ AI ซึ่งแสดงให้เห็นถึงการประยุกต์ใช้ AI ในการสร้างประสบการณ์การเรียนรู้แบบโต้ตอบ ถือเป็นแนวทางที่น่าสนใจสำหรับนักพัฒนาเกมและ AI ในการสร้างสรรค์นวัตกรรม.",
-      "url": "https://dev.to/hung_hoang_a9067d2f773137/sols-runner-my-first-educational-game-with-ai-to-learn-about-summer-solstice-4ilh",
-      "source": "Dev.to"
-    },
-    {
-      "title": "ปัญหาและวิธีโยกย้ายพื้นที่เก็บข้อมูล Ubuntu บน WSL: จากไดรฟ์ C ไปยังไดรฟ์ F",
-      "summary": "บทความนี้ให้คำแนะนำในการจัดการและย้ายพื้นที่เก็บข้อมูลของ Ubuntu บน WSL ซึ่งเป็นปัญหาทั่วไปสำหรับนักพัฒนาที่ใช้ WSL เป็นเครื่องมือหลัก ทำให้การจัดการสภาพแวดล้อมการพัฒนาบน Windows มีประสิทธิภาพมากขึ้น.",
-      "url": "https://dev.to/anikdebnath/wsl-ubuntu-storage-issue-migration-c-drive-to-f-drive-4kia",
-      "source": "Dev.to"
-    },
-    {
-      "title": "ดาราศาสตร์ฟิสิกส์และ AI ด้วย Python: ศิลปะโบราณในการวัดแสงดาว",
-      "summary": "บทความนี้นำเสนอการประยุกต์ใช้ AI และ Python ในสาขาดาราศาสตร์ฟิสิกส์ ซึ่งแสดงให้เห็นถึงศักยภาพของ AI ในการวิเคราะห์ข้อมูลทางวิทยาศาสตร์ขนาดใหญ่ และเป็นแรงบันดาลใจให้นักพัฒนาสำรวจการใช้งาน AI ในโดเมนที่หลากหลาย.",
-      "url": "https://dev.to/programmingcentral/astrophysics-ai-with-python-the-ancient-art-of-measuring-starlight-596l",
-      "source": "Dev.to"
-    },
-    {
-      "title": "แอปของฉันขัดข้องด้วยข้อผิดพลาด 'illegal instruction' – การแก้ไขความเข้ากันได้ของ AVX ช่วยแก้ปัญหาได้",
-      "summary": "บทความนี้กล่าวถึงการแก้ไขปัญหาแอปพลิเคชันล่มจากข้อผิดพลาด 'illegal instruction' ที่เกี่ยวข้องกับความเข้ากันได้ของ AVX ซึ่งเป็นข้อมูลสำคัญสำหรับนักพัฒนาที่ทำงานกับโค้ดประสิทธิภาพสูงและต้องพิจารณาความเข้ากันได้ของ CPU Instruction Set.",
-      "url": "https://dev.to/noushad_patel/my-app-crashed-with-illegal-instruction-avx-compatibility-fixed-it-456m",
-      "source": "Dev.to"
-    },
-    {
-      "title": "ทำความเข้าใจแนวคิด Cloud Computing: คู่มือสำหรับผู้เริ่มต้น",
-      "summary": "คู่มือนี้เป็นพื้นฐานที่ดีสำหรับนักพัฒนาและผู้เริ่มต้นที่ต้องการทำความเข้าใจแนวคิดหลักของ Cloud Computing ซึ่งเป็นเทคโนโลยีสำคัญในการสร้างและปรับใช้แอปพลิเคชันยุคใหม่.",
-      "url": "https://dev.to/segun_michael/understanding-cloud-computing-concepts-a-beginners-guide-c12",
-      "source": "Dev.to"
-    },
-    {
-      "title": "วิธีแก้ไขปัญหา URL สินค้าซ้ำซ้อนของ Shopify ก่อนที่จะส่งผลต่ออันดับการค้นหาของคุณ",
-      "summary": "บทความนี้ให้คำแนะนำที่เป็นประโยชน์สำหรับนักพัฒนาเว็บและผู้ดูแลร้านค้า Shopify ในการแก้ไขปัญหา URL ซ้ำซ้อน ซึ่งเป็นสิ่งสำคัญสำหรับการทำ SEO และช่วยให้เว็บไซต์มีอันดับที่ดีในการค้นหา.",
-      "url": "https://dev.to/new_seastech_6e0103843a9/how-to-fix-shopifys-duplicate-product-url-problem-before-it-tanks-your-rankings-2kp3",
-      "source": "Dev.to"
-    },
-    {
-      "title": "เกินขีดจำกัดของ GitHub Actions หลายครั้ง ผมจึงโฮสต์ CI เองที่บ้าน",
-      "summary": "บทความนี้นำเสนอประสบการณ์การแก้ปัญหาการชนขีดจำกัดของ GitHub Actions ด้วยการโฮสต์ CI/CD ด้วยตัวเอง ซึ่งเป็นแนวทางที่น่าสนใจสำหรับนักพัฒนาที่ต้องการควบคุมกระบวนการ CI/CD ได้มากขึ้นและลดค่าใช้จ่ายในการใช้งานคลาวด์.",
-      "url": "https://dev.to/ianqqu/hit-github-actions-limits-too-many-times-so-i-self-hosted-the-ci-in-my-living-room-5gob",
-      "source": "Dev.to"
+      "title": "บันทึกการพัฒนา: มันสร้างได้แล้ว! (ส่วนใหญ่... สตริงยังติดสัญญา)",
+      "summary": "ข่าวนี้เกี่ยวกับการฟื้นฟูแพ็กเกจ NuGet ชื่อ Munchausen สำหรับ C#/.NET ซึ่งเน้นการสร้างโค้ดแบบโปรแกรมเมติกส์ นักพัฒนา .NET ที่สนใจการสร้างโค้ดอัตโนมัติหรือการพัฒนาไลบรารี NuGet จะพบว่าเรื่องนี้น่าติดตาม",
+      "url": "https://dev.to/ernestohs/dev-log-it-generates-mostly-the-strings-are-ious-23nj",
+      "source": "Dev.to",
+      "emoji": "📝",
+      "imageUrl": "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fc7fj75wyfm5paspwp8tz.png"
     }
   ]
 }

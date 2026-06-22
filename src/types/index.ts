@@ -4,6 +4,7 @@ export interface RawArticle {
   summary: string;
   url: string;
   source: 'Hacker News' | 'Dev.to';
+  imageUrl?: string;
 }
 
 export interface ProcessedArticle {
@@ -11,4 +12,6 @@ export interface ProcessedArticle {
   summary: string; // The 1-2 sentence AI-generated summary
   url: string;
   source: 'Hacker News' | 'Dev.to';
+  emoji: string;
+  imageUrl?: string;
 }

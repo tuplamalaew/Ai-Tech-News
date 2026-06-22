@@ -18,11 +18,18 @@ export function DigestCard({ article }: { article: ProcessedArticle }) {
           </Badge>
         </div>
         <CardTitle className="text-xl text-slate-100 leading-tight group-hover:text-blue-400 transition-colors">
+          <span className="mr-2">{article.emoji}</span>
           {article.title}
         </CardTitle>
       </CardHeader>
       
-      <CardContent className="flex-1">
+      <CardContent className="flex-1 flex flex-col md:flex-row gap-4">
+        {article.imageUrl && (
+          <div className="shrink-0 w-full md:w-32 h-32 rounded-md overflow-hidden bg-slate-800 border border-slate-700">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={article.imageUrl} alt="Thumbnail" className="w-full h-full object-cover" loading="lazy" />
+          </div>
+        )}
         <CardDescription className="text-slate-400 text-sm md:text-base leading-relaxed">
           {article.summary}
         </CardDescription>
