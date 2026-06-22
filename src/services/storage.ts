@@ -1,8 +1,10 @@
 import fs from 'fs/promises';
 import path from 'path';
+import os from 'os';
 import { ProcessedArticle } from '../types';
 
-const DATA_DIR = path.join(process.cwd(), 'data');
+// ใช้แฟ้ม /tmp ซึ่ง Vercel อนุญาตให้เขียนไฟล์ชั่วคราวได้
+const DATA_DIR = path.join(os.tmpdir(), 'ai-tech-news-data');
 const HISTORY_FILE = path.join(DATA_DIR, 'history.json');
 
 export async function saveHistory(articles: ProcessedArticle[]) {
