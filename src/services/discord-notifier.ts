@@ -37,7 +37,8 @@ export async function sendDiscordNotification(articles: ProcessedArticle[]) {
       url: article.url,
       description: article.summary,
       color: color,
-      thumbnail: article.imageUrl ? { url: article.imageUrl } : undefined,
+      // Discord image proxy sometimes returns 500 if the URL is extremely long or complex
+      thumbnail: article.imageUrl && article.imageUrl.length < 500 ? { url: article.imageUrl } : undefined,
       timestamp: new Date().toISOString(),
     };
   });
